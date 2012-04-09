@@ -1,0 +1,21 @@
+<h1>Liste over frivillige</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @frivilligs.each do |frivillig| %>
+  <tr>
+    <td><%= link_to 'Se på', frivillig %></td>
+    <td><%= link_to 'Rediger', edit_frivillig_path(frivillig) %></td>
+    <td><%= link_to 'Slett', frivillig, confirm: 'Er du bombesikker?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Ny frivillig', new_frivillig_path %>
