@@ -1,5 +1,101 @@
-<p id="notice"><%= notice %></p>
+<h1>Frivillig</h1>
 
+<p>
+  <b>Navn</b><br>
+  <%= @frivillig.name %>
+</p>
 
-<%= link_to 'Edit', edit_frivillig_path(@frivillig) %> |
-<%= link_to 'Back', frivilligs_path %>
+<p>
+  <b>E-Post</b><br>
+  <%= @frivillig.email %>
+</p>
+
+<p>
+  <b>Telefon</b><br>
+  <%= @frivillig.phone %>
+</p>
+
+<p>
+  <b>Litt om meg</b><br>
+  <%= @frivillig.desc %>
+</p>
+
+<p>
+  <b>Ankommer Karlsøya</b><br>
+  <%= @frivillig.arriving_date %>
+</p>
+
+<p>
+  <b>Avreise Karlsøya</b><br>
+  <%= @frivillig.leaving_date %>
+</p>
+
+<p>
+  <div style="font-size:18px">Ønskede arbeidsoppgaver</div>
+</p>
+
+<p>
+  <% if @frivillig.vakt  %>
+  <b>Vakt</b><br>
+  <% end %>
+</p>
+
+<p>
+  <% if @frivillig.bar %>
+  <b>Bar / Servering</b><br>
+  <% end %>
+</p>
+
+<p>
+  <% if @frivillig.kjokken %>
+  <b>Kjøkken / Matlaging</b><br>
+  <% end %>
+</p>
+
+<p>
+  <% if @frivillig.scene %>
+  <b>Scene / Konserter</b><br>
+  <% end %>
+</p>
+
+<p>
+  <% if @frivillig.bandhost %>
+  <b>Innkvartering / Band</b><br>
+  <% end %>
+</p>
+
+<p>
+  <% if @frivillig.seminar %>
+  <b>Seminarprogram</b><br>
+  <% end %>
+</p>
+
+<p>
+  <% if @frivillig.opprigg %>
+  <b>Opprigg</b><br>
+  <% end %>
+</p>
+
+<p>
+  <% if @frivillig.nedrigg %>
+  <b>Nedrigg</b><br>
+  <% end %>
+</p>
+
+<p>
+  <% if @frivillig.barn %>
+  <b>Barn</b><br>
+  <% end %>
+</p>
+
+<p>
+  <% if @frivillig.billettsalg %>
+  <b>Billettsalg</b><br>
+  <% end %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', frivilligs_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_frivillig_path(@frivillig), :class => 'btn' %>
+  <%= link_to 'Delete', frivillig_path(@frivillig), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

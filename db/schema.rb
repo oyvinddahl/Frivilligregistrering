@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120409221834) do
+ActiveRecord::Schema.define(:version => 20120415170322) do
 
   create_table "frivilligs", :force => true do |t|
     t.datetime "created_at",    :null => false
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(:version => 20120409221834) do
     t.string   "arriving_date"
     t.string   "leaving_date"
     t.integer  "wishes"
+    t.boolean  "vakt"
+    t.boolean  "bar"
+    t.boolean  "kjokken"
+    t.boolean  "scene"
+    t.boolean  "bandhost"
+    t.boolean  "seminar"
+    t.boolean  "opprigg"
+    t.boolean  "nedrigg"
+    t.boolean  "barn"
+    t.boolean  "billettsalg"
   end
 
 end

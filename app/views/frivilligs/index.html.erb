@@ -1,21 +1,24 @@
-<h1>Liste over frivillige</h1>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @frivilligs.each do |frivillig| %>
-  <tr>
-    <td><%= link_to 'Se på', frivillig %></td>
-    <td><%= link_to 'Rediger', edit_frivillig_path(frivillig) %></td>
-    <td><%= link_to 'Slett', frivillig, confirm: 'Er du bombesikker?', method: :delete %></td>
-  </tr>
-<% end %>
+<h1>Frivilligregister</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Navn</th>
+      <th>Opprettet</th>
+      <th>Handlinger</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @frivilligs.each do |frivillig| %>
+      <tr>
+        <td><%= link_to frivillig.name, frivillig_path(frivillig) %></td>
+        <td><%= frivillig.created_at %></td>
+        <td>
+          <%= link_to 'Rediger', edit_frivillig_path(frivillig), :class => 'btn btn-mini' %>
+          <%= link_to 'Slett', frivillig_path(frivillig), :method => :delete, :confirm => 'Er du sikker?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
-<br />
-
-<%= link_to 'Ny frivillig', new_frivillig_path %>
+<%= link_to 'Ny', new_frivillig_path, :class => 'btn btn-primary' %>

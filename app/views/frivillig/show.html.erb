@@ -1,5 +1,40 @@
 <h1>Frivillig</h1>
 
+<p>
+  <b>Name</b><br>
+  <%= @frivillig.name %>
+</p>
+
+<p>
+  <b>Email</b><br>
+  <%= @frivillig.email %>
+</p>
+
+<p>
+  <b>Phone</b><br>
+  <%= @frivillig.phone %>
+</p>
+
+<p>
+  <b>Desc</b><br>
+  <%= @frivillig.desc %>
+</p>
+
+<p>
+  <b>Arriving date</b><br>
+  <%= @frivillig.arriving_date %>
+</p>
+
+<p>
+  <b>Leaving date</b><br>
+  <%= @frivillig.leaving_date %>
+</p>
+
+<p>
+  <b>Wishes</b><br>
+  <%= @frivillig.wishes %>
+</p>
+
 <div class="form-actions">
   <%= link_to 'Back', frivillig_path, :class => 'btn'  %>
   <%= link_to 'Edit', edit_frivillig_path(@frivillig), :class => 'btn' %>

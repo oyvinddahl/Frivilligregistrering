@@ -3,6 +3,7 @@
   <thead>
     <tr>
       <th>ID</th>
+      <th>Name</th>
       <th>Created at</th>
       <th>Actions</th>
     </tr>
@@ -11,6 +12,7 @@
     <% @frivilligs.each do |frivillig| %>
       <tr>
         <td><%= frivillig.id %></td>
+        <td><%= link_to frivillig.name, frivillig_path(frivillig) %></td>
         <td><%= frivillig.created_at %></td>
         <td>
           <%= link_to 'Edit', edit_frivillig_path(frivillig), :class => 'btn btn-mini' %>
